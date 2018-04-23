@@ -26,8 +26,10 @@ import io.jenkins.updatebot.support.FileMatcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -97,7 +99,8 @@ public class RegexUpdater extends UpdaterSupport {
                 }
             }
             if (answer) {
-                IOHelpers.writeLines(file, Arrays.asList(lines));
+                String updatedText = String.join(System.lineSeparator(), lines);
+                Files.writeToFile(file, updatedText, StandardCharsets.UTF_8);
             }
         }
         return answer;
