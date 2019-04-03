@@ -28,7 +28,7 @@ pipelineConfig:
               - name: GIT_COMMITTER_NAME
                 value: jenkins-x-bot
               - name: BASE_WORKSPACE
-                value: /workspace/workspace
+                value: /workspace/source
               - name: GPG_OPTS
                 value: "--use-agent --pinentry-mode loopback --allow-loopback-pinentry"
               - name: MAVEN_OPTS
