@@ -4,13 +4,13 @@ A bot for updating dependencies on your projects automatically!
 
 [![Javadocs](http://www.javadoc.io/badge/io.jenkins.updatebot/updatebot-core.svg?color=blue)](http://www.javadoc.io/doc/io.jenkins.updatebot/updatebot-core)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.jenkins.updatebot/updatebot-core/badge.svg?style=flat-square)](https://maven-badges.herokuapp.com/maven-central/io.jenkins.updatebot/updatebot-core/)
-![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)
+[![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)](https://github.com/jenkins-x/updatebot/blob/master/LICENSE)
 
 ### Configuration
 
 UpdateBot takes a simple YAML file to define which git repositories and github organisations to search for repositories to update.
 
-See [an example UpdateBot YAML file](updatebot-core/src/test/resources/maven/updatebot.yml)
+See [an example UpdateBot YAML file](updatebot-core/src/test/resources/maven/updatebot.yml).
 
 ## Using UpdateBot
 
@@ -51,7 +51,7 @@ But the jar is also a unix binary so you can just run the following:
 
     ./updatebot-${version}.jar
 
-To install on a unix operating system just copy the updatebot-${version).jar to file called `updatebot` on your `PATH`
+To install on a unix operating system just copy the updatebot-${version).jar to file called `updatebot` on your `PATH`.
 
 ## Kinds of update
 
@@ -65,7 +65,7 @@ To push versions from a repository just run the `push` command passing in the gi
 
     updatebot push --repo https://github.com/foo/bar.git 
     
-You can specify a particular git commit reference (sha, branch, tag) via `--ref`   
+You can specify a particular git commit reference (sha, branch, tag) via `--ref`:
 
     updatebot push --repo https://github.com/foo/bar.git --ref 1.2.3
 
@@ -113,7 +113,7 @@ Then when we run this command:
     
 updatebot will look at all of those matching dependencies in the `ngx-base/package.json` and if they are different to the downstream dependencies it will generate a Pull Request.
 
-e.g. here's an [example generated Pull Request on the ngx-widgets project](https://github.com/jstrachan-testing/ngx-widgets/pull/13)  where it generated a [single commit to update all the changed versions](https://github.com/jstrachan-testing/ngx-widgets/pull/13/commits/a3ade936a21c0f4727bcbad52e6ca227607d86e6)  
+e.g. here's an [example generated Pull Request on the ngx-widgets project](https://github.com/jstrachan-testing/ngx-widgets/pull/13)  where it generated a [single commit to update all the changed versions](https://github.com/jstrachan-testing/ngx-widgets/pull/13/commits/a3ade936a21c0f4727bcbad52e6ca227607d86e6).
     
     
 #### Pushing specific versions
@@ -138,21 +138,21 @@ This will then update any dependencies in your projects.
 
 ### Requirements
 
-UpdateBot requires the following binaries to be available on your `PATH`
+UpdateBot requires the following binaries to be available on your `PATH`:
 
 * java
 * git
 
 #### Node
 
-To be able to pull version changes into your npm packages we use the [ncu](https://www.npmjs.com/package/npm-check-updates) CLI tool. You can install it via [these instructions](https://www.npmjs.com/package/npm-check-updates) or typing
+To be able to pull version changes into your npm packages we use the [ncu](https://www.npmjs.com/package/npm-check-updates) CLI tool. You can install it via [these instructions](https://www.npmjs.com/package/npm-check-updates) or typing:
 
     npm install -g npm-check-updates
 
 
 ### Docker
 
-If you want to use UpdateBot inside a docker image you can reuse the [fabric8/maven-builder](https://hub.docker.com/r/fabric8/maven-builder/) image
+If you want to use UpdateBot inside a docker image you can reuse the [fabric8/maven-builder](https://hub.docker.com/r/fabric8/maven-builder/) image.
 
 
     
