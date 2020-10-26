@@ -21,11 +21,11 @@
   <parent>
     <groupId>io.jenkins.updatebot</groupId>
     <artifactId>parent</artifactId>
-    <version>1.1.60</version>
+    <version>1.1.61-SNAPSHOT</version>
   </parent>
 
   <artifactId>updatebot</artifactId>
-  <version>1.1.60</version>
+  <version>1.1.61-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>updatebot :: executable</name>
 
