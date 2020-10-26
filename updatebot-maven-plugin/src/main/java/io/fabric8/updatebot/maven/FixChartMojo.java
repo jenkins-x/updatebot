@@ -75,6 +75,7 @@ public class FixChartMojo extends AbstractMojo {
             if (httpGet != null) {
                 String path = httpGet.getPath();
                 if (Strings.notEmpty(path)) {
+                    log.debug("found spring boot probe path: " + path);
                     List<String> lines;
                     try {
                         lines = FileHelper.readLines(valuesFile);
@@ -86,7 +87,7 @@ public class FixChartMojo extends AbstractMojo {
                     for (String line : lines) {
                         if (line.startsWith(PROBE_PREFIX)) {
                             String value = Strings.trimPrefix(line, PROBE_PREFIX);
-                            if (value.equals(DEFAULT_PROBE_VALUE) && !value.equals(path)) {
+                            if (!value.equals(path)) {
                                 lines.set(idx, PROBE_PREFIX + path);
                                 modified = true;
                                 break;
