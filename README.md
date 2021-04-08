@@ -8,7 +8,7 @@ A bot for updating dependencies on your projects automatically
 
 ### Golang rewrite available
 
-**NOTE* ff you are interested in a small binary you can use on the command line, in a container image, CI tool or GitHub Action you might like the [jx-upgradebot](https://github.com/jenkins-x-plugins/jx-updatebot) project
+**NOTE** if you are interested in a small binary you can use on the command line, in a container image, CI tool or GitHub Action you might like the [jx-upgradebot](https://github.com/jenkins-x-plugins/jx-updatebot) project
 
 ### Configuration
 
