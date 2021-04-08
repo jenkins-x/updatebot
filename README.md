@@ -6,6 +6,10 @@ A bot for updating dependencies on your projects automatically
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.jenkins.updatebot/updatebot-core/badge.svg?style=flat-square)](https://maven-badges.herokuapp.com/maven-central/io.jenkins.updatebot/updatebot-core/)
 ![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)
 
+### Golang rewrite available
+
+**NOTE* ff you are interested in a small binary you can use on the command line, in a container image, CI tool or GitHub Action you might like the [jx-upgradebot](https://github.com/jenkins-x-plugins/jx-updatebot) project
+
 ### Configuration
 
 UpdateBot takes a simple YAML file to define which git repositories and github organisations to search for repositories to update.
